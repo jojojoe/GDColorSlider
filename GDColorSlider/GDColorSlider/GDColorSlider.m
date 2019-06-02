@@ -8,7 +8,7 @@
 
 #import "GDColorSlider.h"
 #import "UIImage+color.h"
-#import <Masonry/Masonry.h>
+#import "Masonry.h"
 
 
 
