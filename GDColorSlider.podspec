@@ -108,7 +108,7 @@ Pod::Spec.new do |spec|
   # spec.resource  = "icon.png"
   spec.resources = ["GDColorSlider/GDColorSlider/**/*.{png,jpg,jpeg,plist,mp3,html,css,js}","GDColorSlider/GDColorSlider/**/*.{xib, storyBoard}"]
   spec.resource_bundles = {
-    'GDColorSlider' => ['GDColorSlider/Assets/*.xcassets']
+    'GDColorSlider' => ['GDColorSlider/GDColorSlider/*.xcassets']
   }
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
