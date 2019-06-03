@@ -5,10 +5,10 @@
 
 ## A Quick Peek
 
-<img src="https://github.com/jojojoe/GDColorSlider/blob/master/r_demo_2.png"  height="400" width="300">
+<img src="https://github.com/jojojoe/GDColorSlider/blob/master/r_demo_2.png"  height="448" width="207">
 <!--![screenshot](https://github.com/jojojoe/GDColorSlider/blob/master/r_demo_2.png)-->
-
-<iframe height=400 width=300 src="https://github.com/jojojoe/GDColorSlider/blob/master/r_demo_1.gif">
+828. 1792 
+<!--<iframe height=400 width=300 src="https://github.com/jojojoe/GDColorSlider/blob/master/r_demo_1.gif">-->
 
 ## Usage
 
