@@ -12,6 +12,7 @@
 @interface ViewController ()
 - (IBAction)colorSliderValueChange:(GDColorSlider *)sender;
 @property (weak, nonatomic) IBOutlet UIView *contentPreview;
+@property (weak, nonatomic) IBOutlet GDColorSlider *colorRoundSlider;
 
 @end
 
@@ -19,19 +20,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupColorSliderWithCode];
+    [self setupColorRoundSlider];
     
+}
+
+- (void)setupColorSliderWithCode {
     GDColorSlider *colorSlider = [[GDColorSlider alloc] initWithFrame:CGRectMake(0, 0, 300, 80)];
-    colorSlider.center = CGPointMake(UIScreen.mainScreen.bounds.size.width / 2, UIScreen.mainScreen.bounds.size.height - 200);
+    colorSlider.center = CGPointMake(UIScreen.mainScreen.bounds.size.width / 2, UIScreen.mainScreen.bounds.size.height - 80);
     [self.view addSubview:colorSlider];
-    
     
     colorSlider.isShowContentIndicate = YES;
     colorSlider.isShowBottomIndicate = YES;
     colorSlider.isShowRightIndicate = YES;
-    colorSlider.colorImageName = @"colorpan";
+//    colorSlider.colorImageName = @"colorpan";
     
     [colorSlider addTarget:self action:@selector(colorValueChange:) forControlEvents:UIControlEventValueChanged];
-    
+}
+
+- (void)setupColorRoundSlider {
+    self.colorRoundSlider.layer.cornerRadius = 100;
+    self.colorRoundSlider.layer.masksToBounds = YES;
+    self.colorRoundSlider.clipsToBounds = YES;
 }
 
 - (void)colorValueChange:(GDColorSlider *)sender {

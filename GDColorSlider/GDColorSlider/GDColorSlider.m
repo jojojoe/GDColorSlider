@@ -163,8 +163,8 @@
 
 - (UIColor *)selectedColorWithlocationViewPoint:(CGPoint)locationPoint {
     
-    CGFloat x_P = locationPoint.x > CGRectGetMaxX(self.sliderImageView.frame)?CGRectGetMaxX(self.sliderImageView.frame): locationPoint.x;
-    CGFloat y_P = locationPoint.y > CGRectGetMaxY(self.sliderImageView.frame)?CGRectGetMaxY(self.sliderImageView.frame): locationPoint.y;
+    CGFloat x_P = locationPoint.x > (CGRectGetMaxX(self.sliderImageView.frame) - 1)?(CGRectGetMaxX(self.sliderImageView.frame) - 1): locationPoint.x;
+    CGFloat y_P = locationPoint.y > (CGRectGetMaxY(self.sliderImageView.frame) - 1)?(CGRectGetMaxY(self.sliderImageView.frame) - 1): locationPoint.y;
     
     CGPoint cPoint = CGPointMake(x_P, y_P);
     CGFloat scalex = self.sliderImageView.frame.size.width  / self.sliderImageView.image.size.width;

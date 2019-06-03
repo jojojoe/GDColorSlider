@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,8 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8MP-Bu-xX6">
+                                <rect key="frame" x="87" y="64" width="240" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="abb-cJ-XYE"/>
+                                    <constraint firstAttribute="height" constant="100" id="qNb-fL-PlQ"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwu-2d-WOg" customClass="GDColorSlider">
-                                <rect key="frame" x="42" y="403" width="330" height="100"/>
+                                <rect key="frame" x="42" y="204" width="330" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="WEg-E4-XaQ"/>
@@ -34,26 +41,38 @@
                                     <action selector="colorSliderValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="DIV-60-LiR"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8MP-Bu-xX6">
-                                <rect key="frame" x="87" y="124" width="240" height="100"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XjR-Cp-6e1" customClass="GDColorSlider">
+                                <rect key="frame" x="107" y="353" width="200" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="abb-cJ-XYE"/>
-                                    <constraint firstAttribute="height" constant="100" id="qNb-fL-PlQ"/>
+                                    <constraint firstAttribute="width" secondItem="XjR-Cp-6e1" secondAttribute="height" id="DsM-fv-22A"/>
+                                    <constraint firstAttribute="width" constant="200" id="fJT-aA-ElA"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="colorImageName" value="colorpan2"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isShowContentIndicate" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isShowBottomIndicate" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isShowRightIndicate" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="colorSliderValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="ubS-tJ-beu"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.76406314141491194" green="1" blue="0.85223724969113113" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qwu-2d-WOg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerYWithinMargins" id="1sJ-qq-jmR"/>
                             <constraint firstItem="8MP-Bu-xX6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="POD-cf-1TQ"/>
+                            <constraint firstItem="qwu-2d-WOg" firstAttribute="top" secondItem="8MP-Bu-xX6" secondAttribute="bottom" constant="40" id="TXp-t4-Tw2"/>
                             <constraint firstItem="qwu-2d-WOg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="YRN-yN-kh4"/>
-                            <constraint firstItem="8MP-Bu-xX6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="80" id="Z8W-Xr-Cdt"/>
+                            <constraint firstItem="8MP-Bu-xX6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="Z8W-Xr-Cdt"/>
                             <constraint firstItem="qwu-2d-WOg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="ZqN-kl-gYw"/>
+                            <constraint firstItem="XjR-Cp-6e1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="n88-UY-gHK"/>
+                            <constraint firstItem="XjR-Cp-6e1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yMp-JH-YoY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="colorRoundSlider" destination="XjR-Cp-6e1" id="e5I-WH-yM1"/>
                         <outlet property="contentPreview" destination="8MP-Bu-xX6" id="MME-2i-1dv"/>
                     </connections>
                 </viewController>
