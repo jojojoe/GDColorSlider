@@ -44,9 +44,10 @@
 - (void)setColorImageName:(NSString *)colorImageName{
     _colorImageName = colorImageName;
     if (![UIImage imageNamed:colorImageName]) {
-        _colorImageName = @"colorSliderView";
+        self.sliderImageView.image = [UIImage imageNamed:@"colorSliderView" inBundle:[self GDColorSliderBunder] compatibleWithTraitCollection:nil];
+    } else {
+        self.sliderImageView.image = [UIImage imageNamed:self.colorImageName];
     }
-    self.sliderImageView.image = [UIImage imageNamed:_colorImageName];
 }
 
 #pragma mark - Init
@@ -79,10 +80,12 @@
     self.sliderImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 10)];
     self.sliderImageView.contentMode = UIViewContentModeScaleToFill;
     if (!self.colorImageName) {
-        self.colorImageName = @"colorSliderView";
+        self.sliderImageView.image = [UIImage imageNamed:@"colorSliderView" inBundle:[self GDColorSliderBunder] compatibleWithTraitCollection:nil];
+    } else {
+        self.sliderImageView.image = [UIImage imageNamed:self.colorImageName];
     }
-    UIImage *image = [UIImage imageNamed:@"colorSliderView"];
-    self.sliderImageView.image = [UIImage imageNamed:self.colorImageName];
+    
+    
     [self addSubview:self.sliderImageView];
     
     [self updateLayout];
@@ -220,7 +223,11 @@
     
 }
 
-
+- (NSBundle *)GDColorSliderBunder {
+    NSString *bundlePath = [[NSBundle bundleForClass:[self class]].resourcePath stringByAppendingString:@"/GDColorSlider.bundle"];
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    return bundle;
+}
 
 
 @end
