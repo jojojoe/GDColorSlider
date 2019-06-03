@@ -33,7 +33,7 @@
     colorSlider.isShowContentIndicate = YES;
     colorSlider.isShowBottomIndicate = YES;
     colorSlider.isShowRightIndicate = YES;
-//    colorSlider.colorImageName = @"colorpan";
+    colorSlider.colorImageName = @"colorpan";
     
     [colorSlider addTarget:self action:@selector(colorValueChange:) forControlEvents:UIControlEventValueChanged];
 }
