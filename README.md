@@ -13,7 +13,9 @@
 ## Usage
 
 * 1、通过storyboard 直接拖拽UIView控件，修改类为GDColorSlider即可。可修改属性
- ![image](https://github.com/jojojoe/GDColorSlider/blob/master/r_demo_3.png)
+
+<img src="https://github.com/jojojoe/GDColorSlider/blob/master/r_demo_3.png"  height="261" width="119">
+
 
 * 2、通过代码添加
 
