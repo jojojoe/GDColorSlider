@@ -58,15 +58,33 @@
                                     <action selector="colorSliderValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="ubS-tJ-beu"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ay1-kU-w26" customClass="GDColorSlider">
+                                <rect key="frame" x="42" y="583" width="330" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="548-cV-cuC"/>
+                                    <constraint firstAttribute="height" constant="30" id="kqT-vj-Bhk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isShowBottomIndicate" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isShowRightIndicate" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isShowContentIndicate" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="colorSliderValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kzg-3F-bcO"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.76406314141491194" green="1" blue="0.85223724969113113" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ay1-kU-w26" firstAttribute="top" secondItem="XjR-Cp-6e1" secondAttribute="bottom" constant="30" id="7CH-IC-Sp1"/>
                             <constraint firstItem="8MP-Bu-xX6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="POD-cf-1TQ"/>
                             <constraint firstItem="qwu-2d-WOg" firstAttribute="top" secondItem="8MP-Bu-xX6" secondAttribute="bottom" constant="40" id="TXp-t4-Tw2"/>
                             <constraint firstItem="qwu-2d-WOg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="YRN-yN-kh4"/>
                             <constraint firstItem="8MP-Bu-xX6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="Z8W-Xr-Cdt"/>
                             <constraint firstItem="qwu-2d-WOg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="ZqN-kl-gYw"/>
                             <constraint firstItem="XjR-Cp-6e1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="n88-UY-gHK"/>
+                            <constraint firstItem="ay1-kU-w26" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="r0M-je-Rox"/>
                             <constraint firstItem="XjR-Cp-6e1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yMp-JH-YoY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
