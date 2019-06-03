@@ -19,6 +19,8 @@
 
 * 2、通过代码添加
 
+**导入头文件 #import "GDColorSlider.h"**
+
 ```obj-c
     GDColorSlider *colorSlider = [[GDColorSlider alloc] initWithFrame:CGRectMake(0, 0, 300, 80)];
     colorSlider.center = CGPointMake(UIScreen.mainScreen.bounds.size.width / 2, UIScreen.mainScreen.bounds.size.height - 80);
@@ -31,6 +33,13 @@
     
     [colorSlider addTarget:self action:@selector(colorValueChange:) forControlEvents:UIControlEventValueChanged];
 ```
+
+```obj-c
+	- (void)colorValueChange:(GDColorSlider *)sender {
+	    self.contentPreview.backgroundColor = sender.selectedColor;
+	}
+```
+
 
 **只需要传进来颜色图片名即可（默认是一张颜色条图）** 
 **isShowContentIndicate 、 isShowBottomIndicate 、 isShowRightIndicate 分别控制颜色区域的指针、底部指针、右侧指针的显示与否**
