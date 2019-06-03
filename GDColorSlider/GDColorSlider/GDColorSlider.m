@@ -81,6 +81,7 @@
     if (!self.colorImageName) {
         self.colorImageName = @"colorSliderView";
     }
+    UIImage *image = [UIImage imageNamed:@"colorSliderView"];
     self.sliderImageView.image = [UIImage imageNamed:self.colorImageName];
     [self addSubview:self.sliderImageView];
     
