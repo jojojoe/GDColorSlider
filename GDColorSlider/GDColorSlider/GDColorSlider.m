@@ -146,7 +146,7 @@
     self.indicateImageView_b = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 10, 16, 10)];
     self.indicateImageView_b.backgroundColor = [UIColor clearColor];
     self.indicateImageView_b.contentMode = UIViewContentModeScaleAspectFit;
-    self.indicateImageView_b.image = [[UIImage imageNamed:@"indicate_b"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    self.indicateImageView_b.image = [[UIImage imageNamed:@"indicate_b" inBundle:[self GDColorSliderBunder] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     self.indicateImageView_b.tintColor = [UIColor blackColor];
     [self addSubview:self.indicateImageView_b];
 }
@@ -155,7 +155,7 @@
     self.indicateImageView_r = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width - 10, 0, 10, 16)];
     self.indicateImageView_r.backgroundColor = [UIColor clearColor];
     self.indicateImageView_r.contentMode = UIViewContentModeScaleAspectFit;
-    self.indicateImageView_r.image = [[UIImage imageNamed:@"indicate_r"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    self.indicateImageView_r.image = [[UIImage imageNamed:@"indicate_r" inBundle:[self GDColorSliderBunder] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     self.indicateImageView_r.tintColor = [UIColor blackColor];
     [self addSubview:self.indicateImageView_r];
 }
