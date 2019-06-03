@@ -35,13 +35,14 @@
 ```
 
 ```obj-c
-	- (void)colorValueChange:(GDColorSlider *)sender {
-	    self.contentPreview.backgroundColor = sender.selectedColor;
-	}
+    - (void)colorValueChange:(GDColorSlider *)sender {
+       self.contentPreview.backgroundColor = sender.selectedColor;
+    }
 ```
 
 
 **只需要传进来颜色图片名即可（默认是一张颜色条图）** 
+
 **isShowContentIndicate 、 isShowBottomIndicate 、 isShowRightIndicate 分别控制颜色区域的指针、底部指针、右侧指针的显示与否**
 
 ## Installation
